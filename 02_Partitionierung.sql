@@ -56,3 +56,5 @@ ALTER TABLE pTable SWITCH PARTITION 1 TO archiv; --Partition von pTable verschie
 SELECT * FROM archiv; --0 - 200
 
 SELECT * FROM pTable; --200 - Ende
+
+INSERT INTO pTable VALUES (10, 'XY');

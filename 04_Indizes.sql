@@ -133,3 +133,13 @@ order by 1,2,3
 --Indizes aktualisieren, 2 Möglichkeiten
 --Reorganize: Index neu sortieren ohne Neuaufbau
 --Rebuild: Von Grund auf neu aufbauen
+
+--Index mit Filter (WHERE)
+
+CREATE NONCLUSTERED INDEX NCIX_UK ON KundenUmsatz2 (Freight) --Key Columns
+INCLUDE (City, LastName) --Included Columns
+WHERE Country = 'UK'; --Index erstellen mit Bedingung (wird nur angewandt wenn diese Bedingung auch im WHERE vom SELECT verwendet wird)
+
+SELECT City, LastName FROM KundenUmsatz2; --Ohne WHERE: Table Scan
+
+SELECT City, LastName FROM KundenUmsatz2 WHERE Country = 'UK'; --Index Scan

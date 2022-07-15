@@ -34,7 +34,7 @@ SELECT * FROM pTable WHERE partitionNumber = 1500; --20000 Seiten müssen durchsu
 
 --Neue Grenze einbauen bei 5000
 
-ALTER PARTITION SCHEME schZahl NEXT USED bis5000;
+ALTER PARTITION SCHEME schZahl NEXT USED bis5000; ----bis100----bis200----rest----bis5000----alles andere
 
 --Partitionsinformationen über Tabelle anzeigen
 SELECT

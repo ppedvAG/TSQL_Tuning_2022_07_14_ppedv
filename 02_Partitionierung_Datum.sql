@@ -28,7 +28,7 @@ GROUP BY $partition.fDatum(rechnungsdatum);
 --Tatsächliche Partitionsdaten einsehen
 SELECT OBJECT_NAME(object_id), *
 FROM sys.dm_db_partition_stats
--- WHERE OBJECT_NAME(object_id) = 'Kundenumsatz'; --optional
+--WHERE OBJECT_NAME(object_id) = 'pTable'; --optional
 
 -------------------------------------------------------------------------------------------------------------------
 

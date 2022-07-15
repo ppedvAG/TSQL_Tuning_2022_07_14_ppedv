@@ -29,6 +29,9 @@ CREATE TABLE XYZneu (id int) ON [PRIMARY]; --Neuen Table erstellen
 INSERT INTO XYZneu 
 SELECT * FROM XYZ; --Alle Daten bewegen mittels INSERT INTO -> SELECT
 
+--Salamitaktik
+--Aufteilung von groﬂer Tabelle auf mehrere kleine Tabellen
+
 CREATE TABLE Umsatz2021 --Testtabellen erstellen
 (
 	Datum date,
